@@ -51,6 +51,8 @@ x, y = clean_data(ds)
 # TODO: Split data into train and test sets.
 x_train,x_test,y_train,y_test = train_test_split(x.index,y,test_size=0.2)  
 
+run = Run.get_context()
+
 def main():
     # Add arguments to script
     parser = argparse.ArgumentParser()
@@ -67,6 +69,5 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
-
 if __name__ == '__main__':
     main()
