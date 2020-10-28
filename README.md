@@ -12,6 +12,10 @@ The best performing model was a StandardScalerWrapper, ExtremeRandomTrees model.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+utilizing the dataset https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv used
+a classification algorithm to determine poutcome label. Furthermore used the hyperconfig BanditPolicy and Random Sampling to 
+tune the parameterss.
+
 
 **What are the benefits of the parameter sampler you chose?** It provided most variety while being the best performance.
 
@@ -22,9 +26,9 @@ The model choose StandardScalerWrapper, XGBoostRegressor using pdays,cons_price 
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
-Could not compare against the hyperdrive model as had challenges to get the experiment running successfully.
+The AutoML had a higher Accuracy than the the SciKit-learn experiment. This could be due to the number of interations by the AutoML.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?** Use AutoML more.
+**What are some areas of improvement for future experiments? Why might these improvements help the model?** Use AutoML as it eases the process of constructing Models.
 
 
